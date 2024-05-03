@@ -1,3 +1,5 @@
+import pickle
+
 '''
 The Employee class defines attributes related to an employee such as
 name, employee ID, department, job title, basic salary, age, date of birth, and passport details.
@@ -178,6 +180,24 @@ if __name__ == "__main__":
 
     # Create suppliers
     supplier1 = Supplier("S001", "ABC Catering", "101 Oak St", "050-234-5678", "Buffet", 50, 200)
+
+    with open("employee_data.pkl", "wb") as file:
+        pickle.dump([susan, shyam, salma, joy, mariam], file)
+
+    with open("client_data.pkl", "wb") as file:
+        pickle.dump([client1], file)
+
+    with open("guest_data.pkl", "wb") as file:
+        pickle.dump([guest1, guest2], file)
+
+    with open("venue_data.pkl", "wb") as file:
+        pickle.dump([venue1], file)
+
+    with open("supplier_data.pkl", "wb") as file:
+        pickle.dump([supplier1], file)
+
+    with open("event_data.pkl", "wb") as file:
+        pickle.dump([wedding], file)
 
     # Display details
     print(susan.get_details())

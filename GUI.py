@@ -4,6 +4,7 @@ import tkinter.messagebox as messagebox
 
 
 class EventManagementSystem(tk.Tk):
+
     def __init__(self):
         super().__init__()
 
